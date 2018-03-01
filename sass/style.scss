@@ -1,0 +1,232 @@
+// mixins
+@mixin responsive($screenWidth) {
+	@media screen and (max-width: $screenWidth) {
+		@content;
+	}
+}
+
+@mixin responsiveMin($screenWidth) {
+	@media screen and (min-width: $screenWidth) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media screen and (min-width: 502px) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media screen and (min-width: 696px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: 890px) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: 1181px) {
+		@content;
+	}
+}
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+// vars
+
+$font-family-logo : 'Lobster', cursive;
+$font-family : 'Amatic SC', cursive;
+$font-family-roboto : 'Roboto Condensed', sans-serif;
+
+
+header {
+	.wraper {
+		display: flex;
+		margin: 20px auto 10px;
+		flex-direction: column;
+		@include sm {
+			flex-direction: row;
+		}
+		.tel,
+		.address {
+			width: 100%;			
+			display: flex;
+			align-items: center;
+			font-family: $font-family-roboto;
+			font-size: 16px;
+		    text-decoration: underline;
+	        justify-content: center;
+		    @include sm {
+		    	width: 25%;
+		    }
+		    @include md {
+		    	font-size: 20px;
+		    }
+		}
+		.tel {
+
+		}
+		.center {
+			width: 100%;
+			@include sm {
+				width: 50%;
+			}			
+			text-align: center;
+			img {
+				max-width: 80px;
+				border-radius: 50%;
+			}
+			p {
+			    font-weight: 700;
+			    font-family: $font-family-logo;
+				&:first-child {
+					font-size: 15px;
+				}
+				&:last-child {
+					font-size: 19px;
+					margin-top: 10px;
+				}
+			}
+		}
+		.address {
+			p {
+		    	text-align: center;
+			}
+		}
+		@include xl {
+			max-width: 90%;
+		}
+	}
+}
+
+.container {
+	margin: auto;
+	width: 290px;
+	@include sm {
+		width: 470px;
+	}
+	@include md {
+		width: 660px;
+	}
+	@include lg {
+		width: 860px;
+	}
+	@include xl {
+	    width: 1135px;
+	}
+}
+
+body {
+	background: url(img/body-.jpg);
+}
+
+main {
+	.container {
+		padding: 10px;
+	    background: rgba(0, 0, 0, 0.20);
+		border-radius: 20px;
+		@include md {
+			padding: 20px;
+		}
+	}
+	.block {
+		display: flex;		
+		flex-direction: column;
+		&:first-child {
+			margin-bottom: 20px;
+			@include md {
+				margin-bottom: 0px;
+			}
+		}
+		@include lg {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.left {			
+			h1 {
+				font-family: $font-family;
+				text-align: center;
+				font-size: 32px;
+				text-decoration: underline;
+			}
+			p {
+				font-size: 30px;
+			}
+		}
+		.right {
+			h3 {
+				font-family: $font-family;
+				text-align: center;
+				font-size: 32px;
+				text-decoration: underline;
+			}
+			table {
+				margin: auto;
+			    font-size: 30px;
+	        	font-weight: 600;
+	        	td {
+	        		padding: 0 10px;
+	        	}
+			}
+		}
+		.wrap_carousel {
+			@include lg {
+				position: relative;		
+				top: 50%;
+		    	transform: translateY(-50%);
+			}			
+		}	
+		.left, .right {
+			width: 100%;
+			font-family: $font-family;
+			@include lg {
+				width: 48%;
+			}			
+		}
+		&.bottom {
+			.left {
+				order: 1;
+				@include lg {
+					order: -1;
+				}
+			}
+		}		
+	}
+	.slick {
+		a {
+			img {
+				width: 100%;
+			}
+		}
+		&.slick-slider {
+		    border: 1px solid #d09b69;
+			box-shadow: 3px 2px #cd9967;
+		    margin-top: 20px;
+		}
+	}
+	h4 {
+		text-align: center;
+		font-family: $font-family;
+		font-size: 42px;
+		margin-bottom: 10px;
+		margin-top: 30px;
+	}
+}
+.copyright {
+	text-align: center;
+	font-family: $font-family-roboto;
+}

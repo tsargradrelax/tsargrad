@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+header .wraper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media screen and (min-width: 502px) {
+    header .wraper {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  header .wraper .tel,
+  header .wraper .address {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media screen and (min-width: 502px) {
+      header .wraper .tel,
+      header .wraper .address {
+        width: 25%; } }
+    @media screen and (min-width: 696px) {
+      header .wraper .tel,
+      header .wraper .address {
+        font-size: 20px; } }
+  header .wraper .center {
+    width: 100%;
+    text-align: center; }
+    @media screen and (min-width: 502px) {
+      header .wraper .center {
+        width: 50%; } }
+    header .wraper .center img {
+      max-width: 80px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+    header .wraper .center p {
+      font-weight: 700;
+      font-family: "Lobster", cursive; }
+      header .wraper .center p:first-child {
+        font-size: 15px; }
+      header .wraper .center p:last-child {
+        font-size: 19px;
+        margin-top: 10px; }
+  header .wraper .address p {
+    text-align: center; }
+  @media screen and (min-width: 1181px) {
+    header .wraper {
+      max-width: 90%; } }
+
+.container {
+  margin: auto;
+  width: 290px; }
+  @media screen and (min-width: 502px) {
+    .container {
+      width: 470px; } }
+  @media screen and (min-width: 696px) {
+    .container {
+      width: 660px; } }
+  @media screen and (min-width: 890px) {
+    .container {
+      width: 860px; } }
+  @media screen and (min-width: 1181px) {
+    .container {
+      width: 1135px; } }
+
+body {
+  background: url(img/body-.jpg); }
+
+main .container {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 20px;
+          border-radius: 20px; }
+  @media screen and (min-width: 696px) {
+    main .container {
+      padding: 20px; } }
+
+main .block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  main .block:first-child {
+    margin-bottom: 20px; }
+    @media screen and (min-width: 696px) {
+      main .block:first-child {
+        margin-bottom: 0px; } }
+  @media screen and (min-width: 890px) {
+    main .block {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; } }
+  main .block .left h1 {
+    font-family: "Amatic SC", cursive;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline; }
+  main .block .left p {
+    font-size: 30px; }
+  main .block .right h3 {
+    font-family: "Amatic SC", cursive;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline; }
+  main .block .right table {
+    margin: auto;
+    font-size: 30px;
+    font-weight: 600; }
+    main .block .right table td {
+      padding: 0 10px; }
+  @media screen and (min-width: 890px) {
+    main .block .wrap_carousel {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); } }
+  main .block .left, main .block .right {
+    width: 100%;
+    font-family: "Amatic SC", cursive; }
+    @media screen and (min-width: 890px) {
+      main .block .left, main .block .right {
+        width: 48%; } }
+  main .block.bottom .left {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+    @media screen and (min-width: 890px) {
+      main .block.bottom .left {
+        -webkit-box-ordinal-group: 0;
+        -webkit-order: -1;
+            -ms-flex-order: -1;
+                order: -1; } }
+
+main .slick a img {
+  width: 100%; }
+
+main .slick.slick-slider {
+  border: 1px solid #d09b69;
+  -webkit-box-shadow: 3px 2px #cd9967;
+          box-shadow: 3px 2px #cd9967;
+  margin-top: 20px; }
+
+main h4 {
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+  font-size: 42px;
+  margin-bottom: 10px;
+  margin-top: 30px; }
+
+.copyright {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif; }
